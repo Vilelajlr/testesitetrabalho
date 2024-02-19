@@ -1,0 +1,307 @@
+:root {
+  --txtgeral: #f1f1f1;
+  --acabamento: #000;
+  --txtmenu: #8f8e8e;
+  --txtdestaque: #00ff08;
+  --span: #0815c7;
+  --fontTitulo: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --fontTxt: "Poppins", sans-serif;
+}
+
+/* ESTILOS GERAIS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.btn-contato a {
+  text-decoration: none;
+  color: var(--acabamento);
+  background-color: var(--txtdestaque);
+  padding: 10px 40px;
+  font-family: var(--fontTxt);
+  font-weight: 600;
+  border-radius: 20px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-contato a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px var(--txtdestaque);
+}
+
+.titulo {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: var(--fontTitulo);
+}
+
+.titulo span {
+  color: var(--span);
+}
+
+/* ESTILO CABEÇALHO/MENUN */
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  background-color: var(--acabamento);
+  padding: 2rem;
+  height: 9.375rem;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo-site {
+  margin: 0 20px 0 0;
+}
+
+header .menu-desktop {
+  margin: auto;
+  padding: 0 15px;
+}
+
+header .menu-desktop .menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 0.5rem;
+}
+
+.label-menu,
+.checkbox {
+  display: none;
+  color: var(--txtmenu);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+header .menu-desktop a {
+  text-decoration: none;
+  color: var(--txtmenu);
+  padding: 1rem;
+  display: block;
+  transition: 0.2s;
+}
+
+header .menu-desktop a:hover {
+  transform: scale(1.1);
+  color: var(--txtgeral);
+}
+
+header .menu-desktop #pagina-atual {
+  color: var(--txtgeral);
+  border: 1px solid #f1f1f14d;
+  padding: 5px 6px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #f1f1f165;
+}
+
+/* ESTILO TABELA */
+
+main {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.tabela .flex {
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tabela .content {
+  height: 450px;
+  width: 850px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tabela .interface {
+  padding: 40px 4%;
+}
+
+.tabela table {
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+.tabela table tr td,
+th {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--fontTxt);
+  border-radius: 10px;
+}
+
+.tabela table tr .data {
+  background-color: var(--txtdestaque);
+}
+
+/* ESTILO FOOTER */
+.rodape {
+  padding: 40px 4%;
+  background-color: #1423f0a7;
+}
+
+.rodape .interface {
+  margin: auto;
+}
+
+.rodape .rodape-redes {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.rodape .rodape-redes a {
+  margin-right: 10px;
+}
+
+.rodape .rodape-redes a img {
+  width: 30px;
+}
+
+.rodape .info-footer {
+  margin: 20px 10px;
+}
+
+.rodape .info-footer ul {
+  list-style-type: none;
+}
+
+.rodape .info-footer ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  font-family: var(--fontTitulo);
+}
+
+.rodape .info-footer ul li a:hover {
+  color: #f1f1f1;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.rodape .copy {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 700;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1150px) {
+
+  header .interface{
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  header .btn-contato {
+    display: none;
+  }
+
+  header .menu-desktop .menu {
+    display: block;
+    position: absolute;
+    top: 9.375rem;
+    left: 0;
+    background: var(--acabamento);
+    text-align: center;
+    width: 100%;
+    height: 0;
+    z-index: 8888;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  header .menu-desktop .menu a {
+    padding: 1rem 0;
+    margin-inline: 5rem;
+    border-bottom: 0.0625rem solid #8f8e8e4c;
+    border-radius: 0;
+  }
+
+  header .menu-desktop .label-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block: 1rem;
+    cursor: pointer;
+  }
+
+  .hamburguer {
+    border-top: 0.125rem solid;
+    width: 1.25rem;
+  }
+  .hamburguer::before,
+  .hamburguer::after {
+    content: " ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3125rem;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .checkbox:checked ~ .menu {
+    height: calc(100vh - 9.375rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  .checkbox:checked ~ .label-menu .hamburguer {
+    border-top-color: transparent;
+  }
+
+  .checkbox:checked ~ .label-menu .hamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  .checkbox:checked ~ .label-menu .hamburguer::after {
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
+
+  .txt-topo-site .data {
+    flex-direction: column;
+    align-items: center;
+  }
+}
