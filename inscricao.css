@@ -511,8 +511,4 @@ td {
     top: -0.4375rem;
   }
 
-  .txt-topo-site .data {
-    flex-direction: column;
-    align-items: center;
-  }
 }
