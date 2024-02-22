@@ -15,6 +15,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--fontTxt);
 }
 
 body {
@@ -104,6 +105,7 @@ header .menu-desktop .menu {
 }
 
 header .menu-desktop a {
+  font-family: var(--fontTxt);
   text-decoration: none;
   color: var(--txtmenu);
   padding: 1rem;

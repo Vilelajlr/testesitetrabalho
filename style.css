@@ -104,6 +104,7 @@ header .menu-desktop .menu {
 }
 
 header .menu-desktop a {
+  font-family: var(--fontTxt);
   text-decoration: none;
   color: var(--txtmenu);
   padding: 1rem;
@@ -140,7 +141,7 @@ header .menu-desktop #pagina-atual {
 .img-fundo {
   position: relative;
   height: 100vh;
-  background-image: url("imgemfundo.jpg");
+  background-image: url("../images/imgemfundo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -425,6 +426,10 @@ header .menu-desktop #pagina-atual {
   .checkbox:checked ~ .label-menu .hamburguer::after {
     transform: rotate(-135deg);
     top: -0.4375rem;
+  }
+
+  .txt-topo-site .interface {
+   padding: 0;
   }
 
   .txt-topo-site .data {

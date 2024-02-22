@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Google Fontes -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+       rel="stylesheet"
+     />
+     <!-- Fim Google Fontes -->
+
     <title>Increva-se</title>
-    <link rel="stylesheet" href="inscricao.css" />
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/inscricao.css">
+    
   </head>
   <body>
     <header>
       <div class="interface">
         <div class="logo-site">
-          <img src="logo.png" alt="Logo site" />
+          <img src="../images/logo.png" alt="Logo site">
         </div>
         <!--LOGO-SITE-->
 
         <nav class="menu-desktop">
-          <input type="checkbox" id="checkbox" class="checkbox" />
+          <input type="checkbox" id="checkbox" class="checkbox">
           <label for="checkbox" class="label-menu"
             >Menu<span class="hamburguer"></span
           ></label>
@@ -26,7 +37,7 @@
             <li><a href="programacao.html">Programação</a></li>
             <li><a href="inscricao.html" id="pagina-atual">Inscrição</a></li>
             <li><a href="#">Local</a></li>
-            <li><a href="#">Organizadores</a></li>
+            <li><a href="organizadores.html">Produção</a></li>
           </ul>
         </nav>
         <!--MENU-DESKTOP-->
@@ -40,6 +51,7 @@
     </header>
 
     <main>
+
       <section class="valores">
         <div class="interface">
           <h1 class="titulo">Tabela de <span>Valores.</span></h1>
@@ -73,35 +85,35 @@
       </section>
 
      
+      <form action="#" method="get">
         <section class="dados-pessoais">
           <div class="interface">
             <div class="flex">
               <div class="dados">
-                <fieldset>
-                  <legend>Informe <span>Seus Dados</span></legend>
+                <fieldset >
+                  <legend><h1>Informe <span>Seus Dados</span></h1></legend>
                   <div class="dados-obrigatorios">
                     <div class="nome-input">
                       <label for="nome">Nome*: </label>
-                      <input type="text" name="nome" id="nome" required placeholder="Digite o seu nome"/>
-                      <span></span>
+                      <input type="text" name="nome" id="nome" required placeholder="Digite o seu nome">
+        
                     </div>
                     <div class="email-input">
                       <label for="e-mail">Email*: </label>
-                      <input type="email" name="e-mail" id="e-mail" required placeholder="Digite o seu e-mail" />
-                      <span></span>
+                      <input type="email" name="e-mail" id="e-mail" required placeholder="Digite o seu e-mail">
+        
                     </div>
                     <div class="cpf-input">
                       <label for="cpf">CPF*: </label>
-                      <input type="text" name="cpf" id="cpf" required placeholder="Digite o seu cpf"/>
-                      <span></span>
+                      <input type="text" name="cpf" id="cpf" required placeholder="Digite o seu cpf">
                     </div>
                   </div><!--dados-obrigatorios-->
         
                   <div class="sou-estudante">
-                    <input type="radio" name="estudante" id="estudante" />
+                    <input type="radio" name="estudante" id="estudante">
                     <label for="estudante">Sou Estudante</label>
                     <span>
-                      <input type="radio" name="estudante" id="nao-estudante" />
+                      <input type="radio" name="estudante" id="nao-estudante">
                       <label for="nao-estudante">Não sou Estudante</label>
                     </span>
                     <div class="marcado-estudante">
@@ -124,85 +136,130 @@
                       </span><!--mat-->
                       <span>
                         <label for="matricula">Informe o Número da sua Matrícula:</label>
-                        <input type="text" name="matricula" id="matricula" />
+                        <input type="text" name="matricula" id="matricula">
                       </span><!--mat-->
                     </div><!--marcado-estudante-->
                   </div><!--sou-estudante-->
+                  <div class="input-endereco">
+                    <div class="rua">
+                      <div class="end">
+                        <label for="rua">Rua:</label>
+                        <input type="text" name="rua" id="rua" required placeholder="Rua">
+                      </div><!--r-->
+                      <div class="end">
+                        <label for="numero">Nro.: </label>
+                        <input type="number" name="numero" id="numero" required placeholder="Número">
+                      </div><!--nro-->
+                      <div class="end">
+                        <label for="bairro">Bairro: </label>
+                        <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
+                      </div><!--brr-->
+        
+                      </div><!--rua-->
+        
+                    <div class="cidade">
+                      <div class="input-cidades">
+                        <label for="cidades">Cidade:</label>
+                        <input type="text" name="cidades" id="cidades" required placeholder="Cidade">
+                      </div><!--input-cidades-->
+                      <div class="slc-estados">
+                        <label class="estados">Estado:
+                          <select name="est" id="est">
+                            <option value=" ">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                          </select>
+                        </label>
+                      </div><!--slc-estados-->
+                    </div><!--cidade-->
+                  </div><!--input-endereco-->
                 </fieldset>
               </div><!--dados-->
             </div><!--FLEX-->
-          </div>
-          <!--interface-->
+          </div><!--interface-->
         </section><!--dados-pessoais-->
+        
+        <section class="atividades">
+          <div class="interface">
+            <div class="flex">
+              <div class="input-atividades">
+                <fieldset>
+                  <legend><h1>Participe <span>das Atividades</span></h1></legend>
+                  <div class="atividades-do-dia">
+        
+        
+                    <p>Selecione as atividades que deseja participar:</p>
+                    <p>Atenção: As atividades são limitadas e estão sujeitas a disponibilidade de vagas.</p>
+                    <p>As atividades serão realizadas no Campus da <a href="#" id="ufu">UFU - Monte Carmelo.</a></p>
+                    <p>Confira a programação completa. <a href="programacao.html" id="prog">aqui</a></p>
+        
+                    <div class="atividades-input">
+                      <span>
+                      <input type="checkbox" name="atividades[]" id="apresentacao">
+                      <label for="apresentacao"><span class="dia-atv">Dia 04\03 - 09:30 10:30</span> Apresentações de Artigos sobre Inteligência Artificial</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="atividades[]" id="mesa-redonda">
+                        <label for="mesa-redonda"><span class="dia-atv">Dia 04\03 - 11:00 - 12:30</span> Mesa Redonda: Desafios e Oportunidades em Segurança Cibernética</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="atividades[]" id="workshop">
+                        <label for="workshop"><span class="dia-atv">Dia 04\03 - 14:00 - 15:30</span> Workshop Prático sobre Aprendizado de Máquina</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="atividades[]" id="apresenta">
+                        <label for="apresenta"><span class="dia-atv">Dia 05\03 - 10:30 - 12:00</span> Apresentações de Artigos sobre Redes Neurais</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="atividades[]" id="palestra">
+                        <label for="palestra"><span class="dia-atv">Dia 05\03 - 08:30 - 10:00</span> Palestra sobre Ética em Inteligência Artificial</label>
+                      </span>
+                      <span>
+                        <input type="checkbox" name="atividades[]" id="workdesen">
+                        <label for="workdesen"><span class="dia-atv">Dia 06\03 - 11:00 - 12:30</span> Workshop sobre Desenvolvimento de Aplicações Blockchain</label>
+                      </span>
+                    </div><!--atividades-->
+                  </div><!--atividades-do-dia-->
+              </fieldset>
+              </div><!--input-atividades-->
+            </div><!--flex-->
+          </div><!--interface-->
+        </section><!--atividades-->
+        
+          <div class="interface-button">
+            <div class="btn-enviar-limpar">
+              <input type="submit" value="Enviar" class="btn-enviar">
+              <input type="reset" value="Limpar" class="btn-limpar">
+            </div><!--btn-enviar-limpar-->
+          </div><!--interface-->
+      </form>
 
       
-      <section class="endereco">
-        <div class="interface">
-          <div class="flex">
-            <div class="input-endereco">
-              <fieldset>
-                <legend>Informe <span>Seu Endereço</span></legend>
-                <div class="rua">
-                  <div class="r">
-                    <label for="rua">Rua:</label>
-                    <input type="text" name="rua" id="rua" required placeholder="Rua">
-                  </div>
-                  <div class="nro">
-                    <label for="numero">Nro.: </label>
-                    <input type="number" name="numero" id="numero" required placeholder="Número">
-                  </div>
-                  <div class="brr">
-                    <label for="bairro">Bairro: </label>
-                    <input type="text" name="bairro" id="bairro" required placeholder="Bairro">
-                  </div>
-                </div>
-                <div class="cidade">
-                  <div class="input-cidades">
-                    <label for="cidades">Cidade:</label>
-                    <input type="text" name="cidades" id="cidades" required placeholder="Cidade">
-                  </div>
-
-                  <div class="slc-estados">
-                    <label class="estados">Estado:
-                      <select name="est" id="est" required>
-                        <option value=" ">Selecione</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                      </select>
-                    </label>
-                  </div>
-
-                </div>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-      </section>
 
     </main>
 
@@ -211,10 +268,9 @@
         <div class="interface">
           <div class="rodape-redes">
             <a href="#"
-              ><img src="instagram.png" alt="logo inta"
-            /></a>
-            <a href="#"><img src="facebook.png" alt="logo face" /></a>
-            <a href="#"><img src="whatsapp.png" alt="logo wpp" /></a>
+              ><img src="../images/instagram.png" alt="logo inta"></a>
+            <a href="#"><img src="../images/facebook.png" alt="logo face"></a>
+            <a href="#"><img src="../images/whatsapp.png" alt="logo wpp"></a>
           </div>
 
           <div class="info-footer">
