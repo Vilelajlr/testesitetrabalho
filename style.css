@@ -141,7 +141,7 @@ header .menu-desktop #pagina-atual {
 .img-fundo {
   position: relative;
   height: 100vh;
-  background-image: url("../images/imgemfundo.jpg");
+  background-image: url("imgemfundo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
